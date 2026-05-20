@@ -1,0 +1,5 @@
+.banner-home {
+  height: 400px;
+  background-image: url('banner.jpg');
+  background-size: cover;
+}
