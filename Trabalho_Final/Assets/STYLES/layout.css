@@ -1,0 +1,85 @@
+/* Conteiner principal */
+.container,
+.main-header-container,
+.top-bar-content,
+.post.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estrutura de grid geral */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col{
+    padding: 0 15px;
+    flex: 1;
+}
+
+/* Layout da top bar */
+.top-bar{
+    width: 100%;
+}
+
+.main-header{
+    width: 100%;
+    position: relative;
+    background-color: var(--color-bg);
+}
+
+.main-header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Alinhamento da logo */
+.logo{
+    flex-shrink: 0;
+}
+
+/* Navegação */
+.navbar{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Area dos icnes do header */
+.header-icons{
+    display: flex;
+    align-items: center;
+    gap: var(--spancing-sm);
+    flex-shrink: 0;
+}
+
+/* Seção post-destaque */
+.post-destaque{
+    width: 100%;
+    padding: var(--spancing-xl) 0;
+    background-color: var(--color-bg-light);
+}
+.post-destaque-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Espaçamentos */
+.section-padding{
+    padding: var(--spancing-xl);
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: var(--spancing-xl);
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+}
