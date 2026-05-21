@@ -1,75 +1,109 @@
+/* ==================== PAGES/HOME.CSS ==================== */
 
-/* Seção inicial / Post Destaque */
-.post-destaque{
+/* Seção post-destaque */
+.post-destaque {
     background-color: var(--color-bg-light);
-    padding: 60px 0;
+    padding: 60px 0 80px 0;
 }
 
-.post-destaque__grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+.post-destaque__grid {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Post card dentro do post-destaque */
-.post-destaque .post-card--large{
-    background: white;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-normal);
+/* Card principal - POSITION RELATIVE é obrigatório para o absolute funcionar */
+.post-destaque .post-card--large {
+    position: relative;
+    background: transparent;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.post-destaque .post-card--large:hover{
-    box-shadow: var(--shadow-hover);
+/* Imagem do card */
+.post-destaque .post-card__image {
+    position: relative;
+    margin: 0;
 }
 
-.post-destaque .post-card__image{
-    height: 380px;
-    overflow: hidden;
-}
-
-.post-destaque .post-card__image img{
+.post-destaque .post-card__image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+    height: auto;
+    display: block;
 }
 
-.post-destaque .post-card--large:hover .post-card__image img{
-    transform: scale(1.05);
+/* CONTAINER SOBREPOSTO À IMAGEM (CAMADA) */
+.post-destaque .post-card__camada {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    right: auto;
+    max-width: 55%;
+    z-index: 10;
 }
 
-.post-destaque .post-card__content{
-    padding: 25px;
-}
-
-.post-destaque .post-card__date{
-    color: var(--color-text-light);
+/* DATA */
+.post-destaque .post-card__date {
+    color: var(--color-primary);
     font-size: 0.7rem;
-    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
 }
 
-.post-destaque .post-author{
-    font-size: 0.7rem;
-    color: #999;
-    display: inline-block;
-}
-
-.post-destaque .post-card__content h3{
-    font-size: 1.6rem;
-    margin: 12px 0 10px;
-    line-height: 1.2;
+/* TÍTULO */
+.post-destaque .post-card__title {
+    font-size: 1.8rem;
     font-family: var(--font-serif);
+    color: white;
+    margin: 10px 0;
+    line-height: 1.2;
 }
 
-.post-destaque .post-excerpt{
-    color: var(--color-text-light);
-    font-size: 0.9rem;
-    margin: 15px 0;
-    line-height: 1.6;
+/* AUTOR */
+.post-destaque .post-card__author {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
 }
 
+/* DESCRIÇÃO */
+.post-destaque .post-card__excerpt {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
 
+/* BOTÃO READ MORE */
+.post-destaque .btn-readmore {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 4px;
+    transition: all var(--transition-fast);
+}
 
+.post-destaque .btn-readmore:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+    letter-spacing: 2.5px;
+}
+
+/* TÍTULO DA SEÇÃO */
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    font-family: var(--font-serif);
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+}

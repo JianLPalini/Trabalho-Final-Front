@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Wanderland</title>
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./Assets/STYLES/main.css">
 </head>
+
 <body>
 
     <!-- ====================  TOP BAR ==================== -->
     <div class="top-bar">
         <div class="top-bar-content">
-            <span class="top-bar-numero"> 
-                <img src="./Assets/Image/icons/telefone.png" alt="Telefone" width="16" height="16"> +123-45677 789</span>
-            <span class="top-bar-email"> 
-                <img src="Assets/Image/icons/envelope.png" alt="envelope" width="16" height="16"> wanderland@qodeinteractive.com</span>
+            <span class="top-bar-numero">
+                <img src="./Assets/Image/icons/telefone.png" alt="Telefone" width="16" height="16"> +123-45677
+                789</span>
+            <span class="top-bar-email">
+                <img src="Assets/Image/icons/envelope.png" alt="envelope" width="16" height="16">
+                wanderland@qodeinteractive.com</span>
         </div>
         <div class="top-bar-midias">
             <a href="#" class="social-link" aria-label="Instagram">
@@ -103,37 +109,33 @@
             </nav>
 
             <div class="main-header-actions">
-                <button class="icone-buscar" aria-label="Buscar">SEARCH 🔍</button> 
+                <button class="icone-buscar" aria-label="Buscar">SEARCH</button>
             </div>
         </div>
     </header>
 
     <!--  SEÇÃO INICIAL (POSTS EM DESTAQUE) -->
-        <section class="post-destaque">
-            <h2 class="section-title">TRAVEL ESSENCIALS TIPS</h2>
-            <div class="post-destaque__grid">
-             
-                <article class="post-card post-card--large">
-                    <figure class="post-card__image">
-                        <img src="./Assets/Image/Layout Principal.jpg" alt="Montanha">
-                        <figcaption class="post-card__date"> October 8, 2019</figcaption>
-                    </figure>
-                    <div class="post-card__content">
-                        <h3>Moving trough: the everyday urban jungle of your city</h3>
-                        <div class="post-meta">
-                            <span class="post-author">by Alisa Michaels</span>
-                        </div>
-                        <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam...</p>
-                        <a href="#" class="btn-readmore">Read more →</a>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <section class="post-destaque">
+        <h2 class="section-title">TRAVEL ESSENCIALS TIPS</h2>
+        <div class="post-destaque__grid">
+         
+            <article class="post-card post-card--large">
+                <figure class="post-card__image">
+                    <img src="./Assets/Image/Layout Principal.jpg" alt="Montanha">
+                </figure>
+                
+                <!-- CONTAINER SOBREPOSTO (CAMADA) -->
+                <div class="post-card__camada">
+                    <span class="post-card__date">October 8, 2019</span>
+                    <h3 class="post-card__title">Moving trough: the everyday urban jungle of your city</h3>
+                    <span class="post-card__author">by Alisa Michaels</span>
+                    <p class="post-card__excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam...</p>
+                    <a href="#" class="btn-readmore">READ MORE →</a>
+                </div>
+            </article>
+        </div>
+    </section>
     <script src="./Assets/JS/script.js"></script>
 </body>
+
 </html>
-
-
-
-
-

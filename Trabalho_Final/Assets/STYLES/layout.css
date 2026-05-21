@@ -1,85 +1,169 @@
-/* Conteiner principal */
-.container,
-.main-header-container,
-.top-bar-content,
-.post.container{
+/* ==================== LAYOUT.CSS ==================== */
+
+
+/* Container padrão */
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Estrutura de grid geral */
-.row{
+/* ===== TOP BAR ===== */
+.top-bar {
+    background-color: var(--color-secondary);
+    color: #999;
+    font-size: 0.75rem;
+    padding: 12px 0;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
 }
 
-.col{
-    padding: 0 15px;
-    flex: 1;
+.top-bar-content {
+    display: flex;
+    gap: 20px;
 }
 
-/* Layout da top bar */
-.top-bar{
-    width: 100%;
+.top-bar-numero,
+.top-bar-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.main-header{
-    width: 100%;
-    position: relative;
+.top-bar-midias {
+    display: flex;
+    gap: 20px;
+}
+
+/* ===== HEADER PRINCIPAL ===== */
+.main-header {
     background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.main-header-container{
+.main-header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Alinhamento da logo */
-.logo{
+/* Logo */
+.main-header-logo {
     flex-shrink: 0;
 }
 
-/* Navegação */
-.navbar{
+.logo-link {
+    display: inline-block;
+}
+
+.logo-image {
+    max-height: 40px;
+    width: auto;
+}
+
+/* Menu de navegação */
+.navbar {
     flex: 1;
     display: flex;
     justify-content: center;
 }
 
-/* Area dos icnes do header */
-.header-icons{
+.navbar-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item,
+.navbar-item-dropdown {
+    position: relative;
+}
+
+.navbar-link {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: var(--color-secondary);
+    padding: 8px 0;
+    display: inline-block;
+    transition: color var(--transition-fast);
+}
+
+.navbar-link:hover {
+    color: var(--color-primary);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-bg);
+    min-width: 200px;
+    padding: 12px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    z-index: 10;
+    border-top: 2px solid var(--color-primary);
+    list-style: none;
+    margin: 0;
+}
+
+.navbar-item:hover .dropdown-menu,
+.navbar-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 20px;
+    font-size: 0.75rem;
+    color: var(--color-text-light);
+    transition: all var(--transition-fast);
+}
+
+.dropdown-menu li a:hover {
+    color: var(--color-primary);
+    background-color: var(--color-bg-light);
+    padding-left: 25px;
+}
+
+/* Ícones do header */
+.main-header-actions {
     display: flex;
     align-items: center;
-    gap: var(--spancing-sm);
     flex-shrink: 0;
 }
 
-/* Seção post-destaque */
-.post-destaque{
-    width: 100%;
-    padding: var(--spancing-xl) 0;
-    background-color: var(--color-bg-light);
-}
-.post-destaque-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.icone-buscar {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    color: var(--color-secondary);
+    transition: color var(--transition-fast);
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
-/* Espaçamentos */
-.section-padding{
-    padding: var(--spancing-xl);
-}
-
-.section-title{
-    text-align: center;
-    margin-bottom: var(--spancing-xl);
-    font-size: 2.2rem;
-    letter-spacing: -0.5px;
+.icone-buscar:hover {
+    color: var(--color-primary);
 }
