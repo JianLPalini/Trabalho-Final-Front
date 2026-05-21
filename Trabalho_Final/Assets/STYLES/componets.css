@@ -218,3 +218,71 @@
     border-bottom-color: var(--color-primary-dark);
     letter-spacing: 2px;
 }
+
+/* ======== Cards ======== */
+.post-card{
+    background: var(--color-bg);
+    transition: var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.post-card:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.post-card_image{
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+.post-card_date{
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    margin-top: 8px;
+    display: block;
+}
+
+.post-card_content{
+    padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
+}
+
+.post-meta{
+    margin-bottom: 10px;
+}
+
+.post-author{
+    font-size: 0.7rem;
+    color: var(--color-text-light);
+    display: inline-block;
+}
+
+.post-excerpt{
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Post Card */
+.post-card--large .post-card_image img{
+    min-height: 300px;
+    object-fit: cover;
+}
+
+.post-card--large .post-card_content h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: var(--font-serif);
+}
+
+/* Sectuion title */
+.section-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-x1);
+    font-family: var(--font-serif);
+    color: var(--color-secondary);
+    letter-spacing: 1px;
+}
+
