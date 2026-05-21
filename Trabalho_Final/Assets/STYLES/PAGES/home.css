@@ -1,39 +1,75 @@
 
 /* Seção inicial / Post Destaque */
 .post-destaque{
-  background-color: var(--color-bg-light);
-  padding: 60px 0;
+    background-color: var(--color-bg-light);
+    padding: 60px 0;
 }
 
-/* Container da seção */
-.post-destaque-container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.post-destaque__grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Titulo da seçõa */
-.post-destaque .section-title{
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: var(--color-secondary);
-  font-family: var(--font-serif);
-  letter-spacing: -0.3px;
+/* Post card dentro do post-destaque */
+.post-destaque .post-card--large{
+    background: white;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
 }
 
-/* Grid principal */
-.post-destaque-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+.post-destaque .post-card--large:hover{
+    box-shadow: var(--shadow-hover);
 }
 
-/* Post principal em destaque (card) */
-.featured-post{
-  background: white;
-  box-shadow: var(--shadow-sm);
-  transition: var(--transition-normal);
+.post-destaque .post-card__image{
+    height: 380px;
+    overflow: hidden;
 }
+
+.post-destaque .post-card__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.post-destaque .post-card--large:hover .post-card__image img{
+    transform: scale(1.05);
+}
+
+.post-destaque .post-card__content{
+    padding: 25px;
+}
+
+.post-destaque .post-card__date{
+    color: var(--color-text-light);
+    font-size: 0.7rem;
+    margin-top: 8px;
+}
+
+.post-destaque .post-author{
+    font-size: 0.7rem;
+    color: #999;
+    display: inline-block;
+}
+
+.post-destaque .post-card__content h3{
+    font-size: 1.6rem;
+    margin: 12px 0 10px;
+    line-height: 1.2;
+    font-family: var(--font-serif);
+}
+
+.post-destaque .post-excerpt{
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
 
 
