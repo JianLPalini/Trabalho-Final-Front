@@ -1,88 +1,461 @@
-/* ==================== COMPONENTS CSS ==================== */
-/* Botões, cards e elementos reutilizáveis */
-
 /* ===== BOTÕES ===== */
-.btn-readmore {
+.btn-readmore,
+.read-more-link,
+.resort-btn {
     display: inline-block;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    background: transparent;
+    padding: 10px 25px;
+    font-family: var(--font-oswald);
+    font-size: 16px;
     font-weight: 600;
-    color: var(--color-primary);
-    border-bottom: 1px solid var(--color-primary);
-    padding-bottom: 4px;
-    transition: all var(--transition-fast);
-}
-
-.btn-readmore:hover {
-    color: var(--color-primary-dark);
-    border-bottom-color: var(--color-primary-dark);
-    letter-spacing: 2.5px;
-}
-
-/* ===== CARDS ===== */
-.post-card {
-    background: var(--color-bg);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.post-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-.post-card__image {
-    overflow: hidden;
-    position: relative;
-    margin: 0;
-}
-
-.post-card__image img {
-    width: 100%;
-    transition: transform var(--transition-normal);
-    display: block;
-}
-
-.post-card:hover .post-card__image img {
-    transform: scale(1.03);
-}
-
-.post-card__date {
-    font-size: 0.7rem;
-    color: var(--color-text-light);
-    margin-top: 12px;
-    display: block;
-}
-
-.post-card__content {
-    padding: 20px 0 0 0;
-}
-
-.post-meta {
-    margin-bottom: 8px;
-}
-
-.post-author {
-    font-size: 0.7rem;
-    color: var(--color-text-light);
-    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-.post-excerpt {
-    font-size: 0.85rem;
-    color: var(--color-text-light);
-    margin: 12px 0 15px;
-    line-height: 1.6;
+.btn-readmore:hover,
+.read-more-link:hover,
+.resort-btn:hover {
+    background: var(--cor-secundaria);
+    color: white;
 }
 
-/* Section title */
-.section-title {
+/* ===== CARDS (Travel Essentials) ===== */
+.essentials-section {
+    padding: 80px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
     text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    font-family: var(--font-serif);
-    color: var(--color-secondary);
+    margin-bottom: 60px;
+}
+
+.section-header h3 {
+    font-family: var(--font-crimson);
+    font-size: 21px;
+    color: #878787;
+    margin: 0 0 3px;
+
+}
+
+.section-header h2 {
+    font-size: 42px;
+    font-weight: 600;
+    font-family: var(--font-oswald);
+}
+
+.essentials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.essentials-card {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.essentials-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.essentials-text {
+    flex: 1;
+    padding: 40px;
+}
+
+.essentials-text h4 {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    max-width: 400px;
+}
+
+.essentials-text p {
+    font-size: 15px;
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.essentials-image {
+    flex: 1;
+}
+
+.essentials-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.essentials-image:hover img {
+    transform: scale(1.02);
+}
+
+/* ===== FEATURED BLOG POSTS ===== */
+.featured-section {
+    padding: 80px 40px;
+}
+
+.featured-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.featured-card {
+    flex: 1;
+    min-width: 280px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra-1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.featured-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.featured-content {
+    padding: 20px;
+}
+
+.featured-meta {
+    font-size: 12px;
+    color: #888;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.featured-content h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.featured-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter-section {
+    padding: 100px 40px;
+    text-align: center;
+    background: var(--fundo-leve);
+}
+
+.newsletter-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.newsletter-subtitle {
+    font-size: 14px;
+    color: #7c9c6e;
     letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.newsletter-title {
+    font-size: 38px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.newsletter-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.newsletter-input {
+    width: 300px;
+    padding: 14px 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.newsletter-btn {
+    background: #2c3e2b;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-btn:hover {
+    background: #1a3e16;
+}
+
+.newsletter-note {
+    display: block;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* ===== DIGITAL RESORT ===== */
+.digital-resort {
+    display: flex;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 40px;
+    gap: 60px;
+}
+
+.resort-content {
+    flex: 1;
+}
+
+.resort-content h2 {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.resort-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.resort-image {
+    flex: 1;
+}
+
+.resort-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    padding: 60px 40px 30px;
+}
+
+/* ========== TOPO ========== */
+.footer-top {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-about {
+    flex: 2;
+}
+
+.footer-about h4 {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.footer-about p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #aaa;
+}
+
+.footer-top .main-header-logo {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-top .logo-image {
+    max-height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* ========== MEIO ========== */
+.footer-middle {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+.footer-instagram h4,
+.footer-about-blog h4,
+.footer-newsletter h4,
+.footer-recent h4 {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-about-blog p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #aaa;
+}
+
+/* NEWSLETTER */
+.footer-newsletter input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 13px;
+}
+
+.footer-newsletter input::placeholder {
+    color: #888;
+}
+
+.footer-newsletter button {
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background-color: var(--cor-primaria-escuro);
+}
+
+/* RECENT NEWS */
+.footer-recent ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-recent li {
+    margin-bottom: 15px;
+}
+
+.footer-recent li span {
+    display: block;
+    font-size: 11px;
+    color: var(--cor-primaria);
+    margin-bottom: 4px;
+}
+
+.footer-recent li a {
+    font-size: 13px;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-recent li a:hover {
+    color: var(--cor-primaria);
+}
+
+/* INSTAGRAM FEED (placeholder) */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.instagram-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.instagram-grid img:hover {
+    opacity: 0.7;
+}
+
+/* ========== BOTTOM ========== */
+.footer-bottom {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 12px;
+    color: #888;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-social .social-link {
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.3s;
+}
+
+.footer-social .social-link:hover {
+    opacity: 0.7;
+}
+
+.footer-social img {
+    filter: brightness(0) invert(1);
+    width: 20px;
+    height: 20px;
+}
+
+.footer-copyright p {
+    margin: 0;
 }

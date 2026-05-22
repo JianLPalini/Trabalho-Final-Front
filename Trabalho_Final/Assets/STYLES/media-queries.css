@@ -1,0 +1,220 @@
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 0 20px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+    }
+
+    .navbar-link {
+        font-size: 11px;
+    }
+
+    .centro .section-title {
+        font-size: 48px;
+    }
+
+    .section-header h2,
+    .newsletter-title,
+    .resort-content h2 {
+        font-size: 32px;
+    }
+
+    .digital-resort {
+        gap: 30px;
+        padding: 60px 30px;
+    }
+
+    .footer-top {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 8px 20px;
+    }
+
+    .top-bar-content {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .top-bar-midias {
+        justify-content: center;
+    }
+
+    .main-header {
+        top: 80px;
+        /* ajuste para não sobrepor */
+    }
+
+    .main-header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .main-header-logo {
+        margin: 0;
+        order: 2;
+    }
+
+    .mapa {
+        order: 1;
+        position: static;
+        margin-left: 0;
+    }
+
+    .main-header-actions {
+        order: 4;
+        margin-top: 10px;
+    }
+
+    .centro .section-title {
+        font-size: 28px;
+    }
+
+    .centro .post-card__excerpt {
+        font-size: 12px;
+        padding: 0 15px;
+    }
+
+    .centro .btn-readmore {
+        padding: 8px 25px;
+        font-size: 10px;
+    }
+
+    .textos-container {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .essentials-card,
+    .essentials-card.reverse {
+        flex-direction: column;
+
+        .essentials-text {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .essentials-text h4 {
+            font-size: 20px;
+        }
+
+        .featured-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .featured-card {
+            max-width: 400px;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .newsletter-input,
+        .newsletter-btn {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .digital-resort {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .resort-image img {
+            height: 250px;
+        }
+
+        .footer {
+            padding: 40px 20px 20px;
+        }
+
+        .footer-top {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
+        .instagram-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .footer-middle {
+            padding: 20px 0;
+        }
+
+        .footer-social {
+            gap: 25px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+
+    .top-bar-numero,
+    .top-bar-email {
+        font-size: 10px;
+    }
+
+    .top-bar-midias span {
+        display: none;
+    }
+
+    .centro .section-title {
+        font-size: 22px;
+    }
+
+    .post-card__date,
+    .post-card__author {
+        font-size: 10px;
+    }
+
+    .section-header h2,
+    .newsletter-title,
+    .resort-content h2 {
+        font-size: 24px;
+    }
+
+    .essentials-text h4 {
+        font-size: 18px;
+    }
+
+    .featured-content h4 {
+        font-size: 16px;
+    }
+
+    .textos-container img {
+        max-height: 30px;
+    }
+
+    .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-social {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
