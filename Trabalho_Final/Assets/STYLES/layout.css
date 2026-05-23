@@ -1,13 +1,13 @@
 /* ==================== LAYOUT.CSS ==================== */
 
-/* Container padrão */
+/* Container pincipal */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* ===== TOP BAR (SUA VERSÃO) ===== */
+/* ===== TOP BAR  ===== */
 .top-bar {
     background-color: transparent;
     color: white;
@@ -57,7 +57,7 @@
     align-items: center;
 }
 
-/* ===== HEADER PRINCIPAL (SUA VERSÃO) ===== */
+/* ===== HEADER PRINCIPAL ===== */
 .main-header {
     background-color: transparent;
     border: 1px solid white;
@@ -84,9 +84,10 @@
     display: flex;
     position: absolute;
     align-items: center;
-    margin-left: -80px;
+    margin-left: -290px;
     gap: 8px;
     font-size: 1rem;
+    font-family: var(--font-oswald);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
@@ -114,7 +115,6 @@
 .logo-image {
     max-height: 80px;
     width: auto;
-    filter: brightness(0) invert(1);
 }
 
 /* Menu de navegação */
@@ -140,6 +140,7 @@
 
 .navbar-link {
     font-size: 1rem;
+    font-family: var(--font-oswald);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 500;
@@ -225,7 +226,7 @@
     color: var(--cor-primaria);
 }
 
-/* ===== HERO SECTION (MELHORADA, SEM PERDER SEU ESTILO) ===== */
+/* ===== HERO SECTION  ===== */
 .centro {
     height: 100vh;
     background-image: url('../Image/Layout Principal.jpg');
@@ -310,7 +311,7 @@
     background: #1a3e16;
 }
 
-/* ===== LOGOS (SUA VERSÃO COM PEQUENO AJUSTE) ===== */
+/* ===== LOGOS ===== */
 .container-info {
     padding: 60px 20px;
 }
